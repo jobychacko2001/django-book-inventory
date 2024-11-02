@@ -8,9 +8,6 @@ Welcome to the Book Inventory Application! This project helps users manage their
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [API Integration](#api-integration)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
@@ -19,6 +16,7 @@ Welcome to the Book Inventory Application! This project helps users manage their
 - Admin panel for managing the book inventory.
 - Add, edit, and delete books.
 - View detailed information about each book.
+- Bulk Import Feature allows users to import book data as a CSV file in bulk.
 - Search and filter books.
 - Responsive design with Bootstrap.
 
@@ -102,6 +100,12 @@ After setting up the application, you can use the following features:
    - Enter keywords related to the book title or author to find specific books quickly.
      ![image](https://github.com/user-attachments/assets/407ac7e0-9f00-4d6c-a2a9-a60f8c4539ab)
 
+5. **Bulk Import Feature**: 
+   - Users can import book data in bulk by uploading a CSV file.
+   - Navigate to the bulk import section in the admin panel.
+   - Select the CSV file containing the book data and click **"Import."**
+   - Ensure that the CSV file follows the required format to successfully upload the book entries.
+     ![image](https://github.com/user-attachments/assets/b75a1edf-c893-4076-8dc8-974f0da5dc41)
 
 
 ## Contact
