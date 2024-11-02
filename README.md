@@ -70,19 +70,47 @@ Follow these steps to set up the project locally:
 9. Open your web browser and go to `http://127.0.0.1:8000/` to access the application.
 
 
-Usage
+## Usage
+
 After setting up the application, you can use the following features:
 
-1.Login Use the login page to access the application
-2.Admin Panel: Access the admin panel to manage books directly.
-3.Book Management: Add new books, edit existing entries, or delete books from your inventory.
-4.Search Functionality: Use the search box to find specific books quickly.
+1. **Login**: 
+   - Navigate to the login page.
+   - Enter your credentials to access the application.\
+     ![image](https://github.com/user-attachments/assets/c2f6c91b-eaa9-4509-ac9b-add20e250087)
 
-Contact
+2. **Admin Panel**: 
+   - Access the admin panel at `/admin`.
+   - Manage books directly, including adding, editing, and deleting entries.
+     
+
+3. **Book Management**: 
+   - To add a new book:
+     - Click on "Add Book" in the navbar.
+       ![image](https://github.com/user-attachments/assets/1eba742a-d887-42f5-9be4-ac174b0ceb69)
+
+     - Fill out the required fields such as Title, Author, ISBN, and Description.
+   - To edit an existing entry, select the book and click "Edit."
+     ![image](https://github.com/user-attachments/assets/1ce16237-72d9-4a2a-85bb-4f7f73af64a1)
+
+   - To delete a book, click the "Delete" button next to the book entry.
+     ![image](https://github.com/user-attachments/assets/9d63fbbe-878c-416d-8cd4-f1e7632facbd)
+
+
+4. **Search Functionality**: 
+   - Use the search box located at the top of the books list.
+   - Enter keywords related to the book title or author to find specific books quickly.
+     ![image](https://github.com/user-attachments/assets/407ac7e0-9f00-4d6c-a2a9-a60f8c4539ab)
+
+
+
+## Contact
+
 For any questions or feedback, please contact me at:
 
-Email: jobychacko2001@gmail.com
-GitHub: jobychacko2001
+1. **Email:** jobychacko2001@gmail.com  
+2. **GitHub:** jobychacko2001
+
 
 
 
