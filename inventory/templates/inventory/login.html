@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="card border-dark rounded mx-auto mt-5" style="max-width: 400px;">
+        <div class="card-body">
+            <h3 class="text-center">Book Inventory</h3>
+            <h5 class="text-center">LOGIN</h5>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-danger">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-dark mb-3 fw-semibold">Login</button>
+                </div>
+            </form>
+            <div class="text-center mt-3">
+                <a href="{% url 'admin:index' %}" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Go to Admin Panel</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

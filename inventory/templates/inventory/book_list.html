@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4">Book List</h2>
+    <table id="bookTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Published Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in filter.qs %}
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.genre }}</td>
+                    <td>{{ book.publication_date }}</td>
+                    <td>
+                        <a href="{% url 'edit-book' book.id %}" class="btn btn-dark btn-sm me-2 fw-semibold">Edit</a>
+                        <a href="{% url 'delete-book' book.id %}" class="btn btn-danger btn-sm fw-semibold">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    $(document).ready(function() {
+        $('#bookTable').DataTable({
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "info": false,
+            "lengthChange": true,
+            "pageLength": 5, // Set the default number of entries displayed to 5
+            "lengthMenu": [5, 10, 25, 50, -1],
+            "autoWidth": false,
+            "language": {
+                "search": "<i class='bi bi-search'></i> Search:",
+                "searchPlaceholder": "Search books..."
+            }
+        });
+    });
+</script>
+<style>
+    .dataTables_wrapper .dataTables_filter {
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}

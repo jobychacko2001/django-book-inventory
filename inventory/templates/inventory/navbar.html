@@ -1,0 +1,45 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light border-bottom shadow" style="background-color: white;">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="p-4 gap-4 txt-dark fw-semibold navbar-brand" href="{% url 'book-list' %}">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            Book Inventory
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav p-4 gap-4 fw-semibold ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'book-list' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add-book' %}">Add new book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'import-books' %}">Bulk import</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'export-csv' %}">Export to CSV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'export-json' %}">Export to JSON</a>
+                </li>
+
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hello, {{ user.username }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,22 @@
+/* Body Font */
+body {
+    font-family: sans-serif;
+    background: #fbfbfb;
+
+}
+
+/* Heading Font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', "Fraunces Placeholder", serif;
+}
+
+/* Link Styles */
+a {
+    color: #4154f1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #717ff5;
+    text-decoration: none;
+}
