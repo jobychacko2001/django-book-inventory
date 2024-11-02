@@ -12,6 +12,7 @@ import csv
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 import os
+from datetime import date
 
 # Set up logging
 logger = logging.getLogger(__name__)
